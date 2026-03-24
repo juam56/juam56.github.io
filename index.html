@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Southside Auto Recycling — EN/ES</title>
+  <meta name="description" content="Minimalist and modern EN/ES landing for Southside Auto Recycling (Concept B).">
+  <style>
+    :root {
+      --red: #D32F2F;
+      --red-acc: #EF4444;
+      --white: #FFFFFF;
+      --black: #000000;
+      --gray: #6B7280;
+      --bg: #f7f7f7;
+      --card: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, Arial, sans-serif;
+      background: var(--bg);
+      color: #111;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      height: 48px;
+    }
+    .lang-switch {
+      display: inline-flex;
+      border: 1px solid #ddd;
+      border-radius: 999px;
+      overflow: hidden;
+      font-size: 0.9rem;
+    }
+    .lang-switch button {
+      background: #fff;
+      border: none;
+      padding: 8px 14px;
+      cursor: pointer;
+    }
+    .lang-switch button.active {
+      background: #000;
+      color: #fff;
+    }
+
+    /* Page container */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      align-items: center;
+      text-align: left;
+      padding: 40px 0;
+    }
+    .hero h1 {
+      font-family: Montserrat, sans-serif;
+      font-weight: 700;
+      font-size: 2.2rem;
+      margin: 0;
+    }
+    .hero p {
+      font-size: 1.05rem;
+      color: #333;
+      margin: 8px 0 0;
+    }
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      background: var(--red);
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn.secondary {
+      background: transparent;
+      color: #111;
+      border: 2px solid var(--red);
+    }
+
+    /* Sections */
+    section {
+      margin: 40px 0;
+    }
+    h2.section-title {
+      font-family: Montserrat, sans-serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #111;
+      margin: 0 0 8px;
+    }
+    .lead {
+      color: #555;
+      font-size: 1rem;
+    }
+
+    /* Card-like info blocks (Delivery Areas, Belleview) */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 2px 6px rgba(0,0,0,.08);
+    }
+
+    /* Footer with NAP (EN; ES copy appears in content) */
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      background: #111;
+      color: #fff;
+    }
+    .nap {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 900px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.9rem; }
+    }
+
+    /* Accessibility helpers (optional) */
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+  </style>
+</head>
+<body>
+  <!-- Logo (manteniendo el diseño existente) -->
+  <header aria-label="Site header">
+    <!-- Reemplaza el src con tu asset real si lo tienes -->
+    <img class="logo" src="assets/logo_en.svg" alt="Southside Auto Recycling logo" />
+    <div class="lang-switch" aria-label="Language switcher">
+      <button class="active" aria-label="Switch to English" title="English">EN</button>
+      <button aria-label="Switch to Spanish" title="Español" onclick="switchLang('es')">ES</button>
+    </div>
+  </header>
+
+  <!-- Contenido EN (default) -->
+  <main class="container" id="content-en" aria-label="English content">
+    <section class="hero" role="region" aria-label="Hero">
+      <h1>Southside Auto Recycling — Quality used auto parts you can rely on</h1>
+      <p>Search parts by vehicle, quick quotes, local delivery to Orlando, Ocala, The Villages, Leesburg, Clermont</p>
+      <div class="cta-row">
+        <a href="#" class="btn" aria-label="Search Parts by Vehicle">Search Parts by Vehicle</a>
+        <a href="#" class="btn secondary" aria-label="Get a Quote">Get a Quote</a>
+      </div>
+    </section>
+
+    <section aria-label="Delivery areas" class="grid-2">
+      <div class="card" style="min-height:120px;">
+        <h2 class="section-title" style="font-size:1.15rem; margin:0 0 8px;">Delivery Areas</h2>
+        <p class="lead" style="margin:0;">
+          Orlando, Ocala, The Villages, Leesburg, Clermont. Local pickup in Belleview.
+        </p>
+      </div>
+
+      <div class="card" style="min-height:120px;">
+        <h2 class="section-title" style="font-size:1.15rem; margin:0 0 8px;">Belleview, FL</h2>
+        <p class="lead" style="margin:0;">
+          7850 SE 110th St Rd, Belleview, FL
+        </p>
+        <div style="margin-top:8px;">
+          <!-- Placeholder para mapa; reemplaza con un iframe de Google Maps si lo deseas -->
+          <div style="width:100%; height:120px; background:#eee; display:flex; align-items:center; justify-content:center; color:#777; border-radius:8px;">
+            Map placeholder
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="About us" class="grid-2" style="margin-top:20px;">
+      <div class="card">
+        <h2 class="section-title" style="font-size:1.15rem; margin:0 0 8px;">Who we are</h2>
+        <p class="lead" style="margin:0;">
+          Southside Auto Recycling delivers quality used auto parts with dependable service and fast responses.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title" style="font-size:1.15rem; margin:0 0 8px;">Legal</h2>
+        <p class="lead" style="margin:0;">
+          M&M Auto Recycling LLC — partnership details and privacy information to be added here.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Contenido ES (oculto por defecto; se muestra al pulsar ES) -->
+  <main class="container" id="content-es" aria-label="Spanish content" style="display:none;">
+    <section class="hero" role="region" aria-label="Hero (ES)">
+      <h1>Southside Auto Recycling — Piezas de automóvil usadas de calidad</h1>
+      <p>Buscar piezas por vehículo, cotizaciones rápidas, entrega local a Orlando, Ocala, The Villages, Leesburg y Clermont</p>
+      <div class="cta-row">
+        <a href="#" class="btn" aria-label="Buscar piezas por vehículo">Buscar Piezas por Vehículo</a>
+        <a href="#" class="btn secondary" aria-label="Cotizar">Cotizar</a>
+      </div>
+    </section>
+
+    <section aria-label="Áreas de entrega" class="grid-2">
+      <div class="card" style="min-height:120px;">
+        <h2 class="section-title" style="font-size:1.15rem; margin:0 0 8px;">Áreas de entrega</h2>
+        <p class="lead" style="margin:0;">
+          Orlando, Ocala, The Villages, Leesburg, Clermont. Recogida local en Belleview.
+        </p>
+      </div>
+
+      <div class="card" style="min-height:120px;">
+        <h2 class="section-title" style="font-size:1.15rem; margin:0 0 8px;">Belleview, FL</h2>
+        <p class="lead" style="margin:0;">
+          7850 SE 110th St Rd, Belleview, FL
+        </p>
+        <div style="margin-top:8px;">
+          <div style="width:100%; height:120px; background:#eee; display:flex; align-items:center; justify-content:center; color:#777; border-radius:8px;">
+            Límite de mapa - marcador
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Sobre nosotros" class="grid-2" style="margin-top:20px;">
+      <div class="card">
+        <h2 class="section-title" style="font-size:1.15rem; margin:0 0 8px;">Quiénes somos</h2>
+        <p class="lead" style="margin:0;">
+          Southside Auto Recycling ofrece piezas usadas de automóvil con servicio confiable y respuestas rápidas.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 class="section-title" style="font-size:1.15rem; margin:0 0 8px;">Aviso Legal</h2>
+        <p class="lead" style="margin:0;">
+          M&M Auto Recycling LLC — detalles de asociación y política de privacidad.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer con NAP (EN/ES presentes) -->
+  <footer aria-label="Site footer">
+    <div class="container nap" id="nap" style="padding:12px 0;">
+      <strong>Southside Auto Recycling</strong><br />
+      7850 SE 110th St Rd, Belleview, FL<br />
+      Tel: +1 (352) 245-0640<br />
+      Belleview, FL, USA
+    </div>
+  </footer>
+
+  <script>
+    // Simple language switcher: EN por defecto, ES al hacer clic
+    function switchLang(lang) {
+      const en = document.getElementById('content-en');
+      const es = document.getElementById('content-es');
+      const btnEn = document.querySelector('.lang-switch button[aria-label="Switch to English"]');
+      if (lang === 'es') {
+        es.style.display = 'block';
+        en.style.display = 'none';
+        btnEn.classList.remove('active');
+        document.querySelector('.lang-switch button[aria-label="Switch to Spanish"]').classList.add('active');
+        document.documentElement.setAttribute('lang', 'es');
+      } else {
+        es.style.display = 'none';
+        en.style.display = 'block';
+        document.querySelector('.lang-switch button[aria-label="Switch to Spanish"]').classList.remove('active');
+        btnEn.classList.add('active');
+        document.documentElement.setAttribute('lang', 'en');
+      }
+    }
+
+    // Inicialización: EN visible por defecto
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('content-en').style.display = 'block';
+      document.getElementById('content-es').style.display = 'none';
+    });
+  </script>
+</body>
+</html>
