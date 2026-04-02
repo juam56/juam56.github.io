@@ -20,7 +20,6 @@
       text-decoration: none;
     }
 
-    /* TOP BAR */
     .topbar {
       background: #111;
       color: #fff;
@@ -43,7 +42,6 @@
       font-weight: bold;
     }
 
-    /* HEADER */
     header {
       background: #fff;
       border-bottom: 1px solid #ddd;
@@ -61,16 +59,30 @@
     }
 
     .brand {
-      font-size: 30px;
-      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .brand img {
+      height: 75px;
+      width: auto;
+      display: block;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-text strong {
+      font-size: 28px;
       color: #d32f2f;
     }
 
-    .brand small {
-      display: block;
+    .brand-text small {
       color: #666;
       font-size: 13px;
-      font-weight: normal;
     }
 
     nav {
@@ -84,7 +96,6 @@
       font-weight: bold;
     }
 
-    /* HERO */
     .hero {
       background: linear-gradient(rgba(0,0,0,.70), rgba(0,0,0,.70)),
         url('https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1400&q=80') center/cover;
@@ -181,7 +192,6 @@
       font-size: 15px;
     }
 
-    /* INFO STRIP */
     .strip {
       background: #d32f2f;
       color: white;
@@ -203,7 +213,6 @@
       margin-bottom: 4px;
     }
 
-    /* SECTIONS */
     .section {
       max-width: 1200px;
       margin: auto;
@@ -312,13 +321,17 @@
       gap: 25px;
     }
 
+    .footer-logo {
+      max-width: 180px;
+      margin-bottom: 15px;
+    }
+
     footer h4 {
       margin-top: 0;
       color: #fff;
     }
 
-    footer p,
-    footer li {
+    footer p {
       color: #ccc;
       line-height: 1.7;
       margin: 0 0 10px;
@@ -354,6 +367,11 @@
         flex-direction: column;
         align-items: flex-start;
       }
+
+      .brand {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
@@ -373,8 +391,11 @@
   <header>
     <div class="header-wrap">
       <div class="brand">
-        Southside Auto Recycling
-        <small>M&M Auto Recycling LLC</small>
+        <img src="logo.png" alt="Southside Auto Recycling Logo">
+        <div class="brand-text">
+          <strong>Southside Auto Recycling</strong>
+          <small>M&M Auto Recycling LLC</small>
+        </div>
       </div>
       <nav>
         <a href="#about">About</a>
@@ -385,7 +406,6 @@
     </div>
   </header>
 
-  <!-- ENGLISH -->
   <div id="english">
     <section class="hero">
       <div class="hero-wrap">
@@ -505,7 +525,6 @@
     </section>
   </div>
 
-  <!-- SPANISH -->
   <div id="spanish" class="hidden">
     <section class="hero">
       <div class="hero-wrap">
@@ -628,7 +647,7 @@
   <footer id="contact">
     <div class="footer-wrap">
       <div>
-        <h4>Southside Auto Recycling</h4>
+        <img src="logo.png" alt="Southside Auto Recycling Logo" class="footer-logo">
         <p>Used auto parts you can rely on.</p>
         <p>M&M Auto Recycling LLC</p>
       </div>
