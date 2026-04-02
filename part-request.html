@@ -1,1 +1,612 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parts Request Form | Southside Auto Recycling</title>
+  <meta name="description" content="Request used auto parts from Southside Auto Recycling in Belleview, FL.">
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f5f7;
+      color: #111;
+    }
+
+    a { text-decoration: none; }
+    .hidden { display: none; }
+
+    .topbar {
+      background: #111;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+
+    .topbar-wrap {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .lang-btn {
+      background: #d32f2f;
+      color: #fff;
+      border: none;
+      padding: 7px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .header-wrap {
+      max-width: 1200px;
+      margin: auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .brand img {
+      height: 68px;
+      width: auto;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 28px;
+      color: #d32f2f;
+      line-height: 1.1;
+    }
+
+    .brand-text small {
+      color: #666;
+      font-size: 13px;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #111;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #d32f2f;
+    }
+
+    .page {
+      max-width: 1000px;
+      margin: auto;
+      padding: 50px 20px 70px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .intro small {
+      display: block;
+      color: #d32f2f;
+      font-weight: bold;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .intro h1 {
+      margin: 0 0 12px;
+      font-size: 44px;
+      color: #111;
+    }
+
+    .intro p {
+      max-width: 760px;
+      margin: auto;
+      color: #666;
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    .form-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 35px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.08);
+    }
+
+    .form-title {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .form-title h2 {
+      margin: 0 0 10px;
+      font-size: 34px;
+      color: #111;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 12px 0 16px;
+    }
+
+    .divider .line {
+      width: 80px;
+      height: 3px;
+      background: #d32f2f;
+      border-radius: 10px;
+    }
+
+    .divider .gear {
+      font-size: 24px;
+      color: #666;
+    }
+
+    .form-title p {
+      color: #666;
+      margin: 0;
+      font-size: 16px;
+    }
+
+    form {
+      margin-top: 25px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+    }
+
+    .field label {
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #222;
+      font-size: 14px;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #d5d5d5;
+      border-radius: 8px;
+      font-size: 15px;
+      background: #fafafa;
+    }
+
+    .field textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    .submit-btn {
+      display: inline-block;
+      width: 100%;
+      background: #d32f2f;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .submit-btn:hover {
+      background: #b71c1c;
+    }
+
+    .helper-box {
+      background: #fff;
+      margin-top: 25px;
+      border-radius: 12px;
+      padding: 22px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.06);
+    }
+
+    .helper-box h3 {
+      margin-top: 0;
+      color: #111;
+    }
+
+    .helper-box p {
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background: #000;
+      color: #fff;
+      padding: 40px 20px 25px;
+    }
+
+    .footer-wrap {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+    }
+
+    .footer-logo {
+      max-width: 180px;
+      margin-bottom: 14px;
+    }
+
+    footer h4 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      color: #ccc;
+      line-height: 1.8;
+      margin: 0 0 8px;
+    }
+
+    .copyright {
+      max-width: 1200px;
+      margin: 20px auto 0;
+      border-top: 1px solid #222;
+      padding-top: 18px;
+      color: #aaa;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      .grid-2,
+      .footer-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .intro h1 {
+        font-size: 32px;
+      }
+
+      .form-card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="topbar-wrap">
+      <div>
+        📍 7850 SE 110th St Rd, Belleview, FL &nbsp; | &nbsp; 📞 <a href="tel:3522450640" style="color:#fff;">(352) 245-0640</a>
+      </div>
+      <div>
+        <button class="lang-btn" onclick="showEnglish()">EN</button>
+        <button class="lang-btn" onclick="showSpanish()">ES</button>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="header-wrap">
+      <div class="brand">
+        <img src="logo.png" alt="Southside Auto Recycling Logo">
+        <div class="brand-text">
+          <strong>Southside Auto Recycling</strong>
+          <small>M&M Auto Recycling LLC</small>
+        </div>
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html">Parts</a>
+        <a href="index.html">Delivery</a>
+        <a href="index.html">Location</a>
+        <a href="index.html">Contact</a>
+        <a href="part-request.html">Request a Part</a>
+        <a href="instagram.html">Instagram</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ENGLISH -->
+  <div id="english">
+    <div class="page">
+      <div class="intro">
+        <small>YOUR GATEWAY TO AUTO PARTS</small>
+        <h1>Parts Request Form</h1>
+        <p>
+          Welcome to our Find Parts section. This form is designed to make requesting auto parts effortless and give you a direct path to secure the components you need for your vehicle.
+        </p>
+      </div>
+
+      <div class="form-card">
+        <div class="form-title">
+          <h2>Parts Request Form</h2>
+          <div class="divider">
+            <span class="line"></span>
+            <span class="gear">⚙</span>
+            <span class="line"></span>
+          </div>
+          <p>Help us assist you better by providing the following details:</p>
+        </div>
+
+        <form action="https://formsubmit.co/sales@mmautoparts.net" method="POST">
+          <input type="hidden" name="_subject" value="New Parts Request - Southside Auto Recycling">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="Language" value="English">
+
+          <div class="grid-2">
+            <div class="field">
+              <label>First Name</label>
+              <input type="text" name="First Name" placeholder="First Name" required>
+            </div>
+
+            <div class="field">
+              <label>Last Name</label>
+              <input type="text" name="Last Name" placeholder="Last Name" required>
+            </div>
+
+            <div class="field">
+              <label>Company Name</label>
+              <input type="text" name="Company Name" placeholder="Company Name (Optional)">
+            </div>
+
+            <div class="field">
+              <label>Email</label>
+              <input type="email" name="Email" placeholder="Email" required>
+            </div>
+
+            <div class="field full">
+              <label>Phone Number</label>
+              <input type="text" name="Phone Number" placeholder="Phone Number" required>
+            </div>
+
+            <div class="field">
+              <label>Year</label>
+              <input type="text" name="Year" placeholder="Vehicle Year">
+            </div>
+
+            <div class="field">
+              <label>Make</label>
+              <input type="text" name="Make" placeholder="Vehicle Make">
+            </div>
+
+            <div class="field">
+              <label>Model</label>
+              <input type="text" name="Model" placeholder="Vehicle Model">
+            </div>
+
+            <div class="field">
+              <label>Part Needed</label>
+              <select name="Part Needed">
+                <option>Select Part Needed</option>
+                <option>Engine</option>
+                <option>Transmission</option>
+                <option>Door</option>
+                <option>Headlight</option>
+                <option>Bumper</option>
+                <option>Mirror</option>
+                <option>Wheel</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label>Additional Details</label>
+              <textarea name="Additional Details" placeholder="Tell us more about the part you need..."></textarea>
+            </div>
+
+            <div class="field full">
+              <button type="submit" class="submit-btn">Submit Request</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="helper-box">
+        <h3>Need help faster?</h3>
+        <p>📞 Call us directly at <strong>(352) 245-0640</strong></p>
+        <p>📍 7850 SE 110th St Rd, Belleview, FL</p>
+        <p>🚚 Delivery available to Orlando, Ocala, The Villages, Leesburg, and Clermont</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPANISH -->
+  <div id="spanish" class="hidden">
+    <div class="page">
+      <div class="intro">
+        <small>TU ACCESO A PIEZAS DE AUTO</small>
+        <h1>Formulario de Solicitud de Piezas</h1>
+        <p>
+          Bienvenido a nuestra sección para encontrar piezas. Este formulario está diseñado para facilitar la solicitud de autopartes y darte una forma directa de conseguir los componentes que necesitas para tu vehículo.
+        </p>
+      </div>
+
+      <div class="form-card">
+        <div class="form-title">
+          <h2>Formulario de Solicitud de Piezas</h2>
+          <div class="divider">
+            <span class="line"></span>
+            <span class="gear">⚙</span>
+            <span class="line"></span>
+          </div>
+          <p>Ayúdanos a atenderte mejor proporcionando la siguiente información:</p>
+        </div>
+
+        <form action="https://formsubmit.co/sales@mmautoparts.net" method="POST">
+          <input type="hidden" name="_subject" value="Nueva Solicitud de Pieza - Southside Auto Recycling">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="Language" value="Spanish">
+
+          <div class="grid-2">
+            <div class="field">
+              <label>Nombre</label>
+              <input type="text" name="Nombre" placeholder="Nombre" required>
+            </div>
+
+            <div class="field">
+              <label>Apellido</label>
+              <input type="text" name="Apellido" placeholder="Apellido" required>
+            </div>
+
+            <div class="field">
+              <label>Nombre de la Empresa</label>
+              <input type="text" name="Nombre de la Empresa" placeholder="Nombre de la Empresa (Opcional)">
+            </div>
+
+            <div class="field">
+              <label>Correo Electrónico</label>
+              <input type="email" name="Correo Electrónico" placeholder="Correo Electrónico" required>
+            </div>
+
+            <div class="field full">
+              <label>Número de Teléfono</label>
+              <input type="text" name="Número de Teléfono" placeholder="Número de Teléfono" required>
+            </div>
+
+            <div class="field">
+              <label>Año</label>
+              <input type="text" name="Año" placeholder="Año del Vehículo">
+            </div>
+
+            <div class="field">
+              <label>Marca</label>
+              <input type="text" name="Marca" placeholder="Marca del Vehículo">
+            </div>
+
+            <div class="field">
+              <label>Modelo</label>
+              <input type="text" name="Modelo" placeholder="Modelo del Vehículo">
+            </div>
+
+            <div class="field">
+              <label>Pieza Necesaria</label>
+              <select name="Pieza Necesaria">
+                <option>Selecciona la pieza</option>
+                <option>Motor</option>
+                <option>Transmisión</option>
+                <option>Puerta</option>
+                <option>Faro</option>
+                <option>Bumper</option>
+                <option>Espejo</option>
+                <option>Rin</option>
+                <option>Otra</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label>Detalles Adicionales</label>
+              <textarea name="Detalles Adicionales" placeholder="Cuéntanos más sobre la pieza que necesitas..."></textarea>
+            </div>
+
+            <div class="field full">
+              <button type="submit" class="submit-btn">Enviar Solicitud</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="helper-box">
+        <h3>¿Necesitas ayuda más rápido?</h3>
+        <p>📞 Llámanos directamente al <strong>(352) 245-0640</strong></p>
+        <p>📍 7850 SE 110th St Rd, Belleview, FL</p>
+        <p>🚚 Entregas disponibles a Orlando, Ocala, The Villages, Leesburg y Clermont</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-wrap">
+      <div>
+        <img src="logo.png" alt="Southside Auto Recycling Logo" class="footer-logo">
+        <p><strong>Southside Auto Recycling</strong></p>
+        <p>M&M Auto Recycling LLC</p>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>7850 SE 110th St Rd</p>
+        <p>Belleview, FL</p>
+        <p>(352) 245-0640</p>
+      </div>
+
+      <div>
+        <h4>Service Areas</h4>
+        <p>Orlando</p>
+        <p>Ocala</p>
+        <p>The Villages</p>
+        <p>Leesburg</p>
+        <p>Clermont</p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2025 Southside Auto Recycling | M&M Auto Recycling LLC
+    </div>
+  </footer>
+
+  <script>
+    function showEnglish() {
+      document.getElementById("english").classList.remove("hidden");
+      document.getElementById("spanish").classList.add("hidden");
+      document.documentElement.lang = "en";
+    }
+
+    function showSpanish() {
+      document.getElementById("spanish").classList.remove("hidden");
+      document.getElementById("english").classList.add("hidden");
+      document.documentElement.lang = "es";
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      showEnglish();
+    });
+  </script>
+
+</body>
+</html>
