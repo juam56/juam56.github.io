@@ -15,6 +15,7 @@
     }
 
     a { text-decoration: none; }
+    .hidden { display: none; }
 
     .topbar {
       background: #111;
@@ -30,6 +31,7 @@
       justify-content: space-between;
       flex-wrap: wrap;
       gap: 10px;
+      align-items: center;
     }
 
     .lang-btn {
@@ -73,6 +75,7 @@
       display: block;
       font-size: 28px;
       color: #d32f2f;
+      line-height: 1.1;
     }
 
     .brand-text small {
@@ -89,22 +92,27 @@
     nav a {
       color: #111;
       font-weight: bold;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #d32f2f;
     }
 
     .page {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: auto;
       padding: 50px 20px 70px;
     }
 
     .hero {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
 
     .hero h1 {
       font-size: 42px;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
     .hero p {
@@ -112,6 +120,7 @@
       max-width: 760px;
       margin: auto;
       line-height: 1.7;
+      font-size: 16px;
     }
 
     .insta-btn {
@@ -134,16 +143,58 @@
 
     .feed-box h2 {
       margin-top: 0;
+      text-align: center;
+      margin-bottom: 25px;
     }
 
-    .placeholder {
-      background: #fafafa;
-      border: 2px dashed #ccc;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .post-card {
+      background: #fff;
+      border: 1px solid #e5e5e5;
       border-radius: 12px;
-      padding: 40px 20px;
-      text-align: center;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,.06);
+      transition: transform 0.2s ease;
+    }
+
+    .post-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .post-card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .post-content {
+      padding: 14px;
+    }
+
+    .post-content h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      color: #111;
+    }
+
+    .post-content p {
+      margin: 0 0 12px;
       color: #666;
-      line-height: 1.8;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .post-link {
+      display: inline-block;
+      color: #d32f2f;
+      font-weight: bold;
+      font-size: 14px;
     }
 
     footer {
@@ -185,7 +236,8 @@
       font-size: 14px;
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
+      .grid,
       .footer-wrap {
         grid-template-columns: 1fr;
       }
@@ -202,8 +254,8 @@
     <div class="topbar-wrap">
       <div>📍 7850 SE 110th St Rd, Belleview, FL | 📞 (352) 245-0640</div>
       <div>
-        <button class="lang-btn">EN</button>
-        <button class="lang-btn">ES</button>
+        <button class="lang-btn" onclick="showEnglish()">EN</button>
+        <button class="lang-btn" onclick="showSpanish()">ES</button>
       </div>
     </div>
   </div>
@@ -226,24 +278,148 @@
     </div>
   </header>
 
-  <div class="page">
-    <div class="hero">
-      <h1>Follow Us on Instagram</h1>
-      <p>
-        Stay connected with Southside Auto Recycling and see updates, arrivals, and more.
-      </p>
+  <!-- ENGLISH -->
+  <div id="english">
+    <div class="page">
+      <div class="hero">
+        <h1>Instagram Posts</h1>
+        <p>
+          See our latest parts, arrivals, and updates from Southside Auto Recycling.
+        </p>
+        <a href="https://www.instagram.com/" target="_blank" class="insta-btn">Visit Instagram Profile</a>
+      </div>
 
-      <a href="https://www.instagram.com/southsideautorecycling?igsh=ZnFhdmszcTM3Ymts&utm_source=qr" target="_blank" class="insta-btn">
-        Open Instagram Profile
-      </a>
+      <div class="feed-box">
+        <h2>Latest Posts</h2>
+
+        <div class="grid">
+          <div class="post-card">
+            <img src="insta1.jpg" alt="Instagram post 1">
+            <div class="post-content">
+              <h3>Latest Arrival</h3>
+              <p>Used auto parts and new inventory updates.</p>
+              <a class="post-link" href="https://www.instagram.com/" target="_blank">View post</a>
+            </div>
+          </div>
+
+          <div class="post-card">
+            <img src="insta2.jpg" alt="Instagram post 2">
+            <div class="post-content">
+              <h3>Parts in Stock</h3>
+              <p>Check our recent parts and available inventory.</p>
+              <a class="post-link" href="https://www.instagram.com/" target="_blank">View post</a>
+            </div>
+          </div>
+
+          <div class="post-card">
+            <img src="insta3.jpg" alt="Instagram post 3">
+            <div class="post-content">
+              <h3>Body Parts</h3>
+              <p>Doors, bumpers, mirrors, headlights and more.</p>
+              <a class="post-link" href="https://www.instagram.com/" target="_blank">View post</a>
+            </div>
+          </div>
+
+          <div class="post-card">
+            <img src="insta4.jpg" alt="Instagram post 4">
+            <div class="post-content">
+              <h3>Engines & Transmissions</h3>
+              <p>Reliable recycled parts ready to go.</p>
+              <a class="post-link" href="https://www.instagram.com/" target="_blank">View post</a>
+            </div>
+          </div>
+
+          <div class="post-card">
+            <img src="insta5.jpg" alt="Instagram post 5">
+            <div class="post-content">
+              <h3>Customer Updates</h3>
+              <p>See highlights and service updates from our business.</p>
+              <a class="post-link" href="https://www.instagram.com/" target="_blank">View post</a>
+            </div>
+          </div>
+
+          <div class="post-card">
+            <img src="insta6.jpg" alt="Instagram post 6">
+            <div class="post-content">
+              <h3>More From Southside</h3>
+              <p>Follow us to stay updated with our latest posts.</p>
+              <a class="post-link" href="https://www.instagram.com/" target="_blank">View post</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <div class="feed-box">
-      <h2>Instagram Feed</h2>
-      <div class="placeholder">
-        Aquí puedes conectar tus publicaciones de Instagram.<br><br>
-        Si luego quieres mostrar el feed automático, puedes usar un widget gratis como LightWidget y pegar aquí el código.<br><br>
-        Mientras tanto, el botón de arriba ya conecta tu página con Instagram.
+  <!-- SPANISH -->
+  <div id="spanish" class="hidden">
+    <div class="page">
+      <div class="hero">
+        <h1>Publicaciones de Instagram</h1>
+        <p>
+          Mira nuestras piezas recientes, llegadas nuevas y actualizaciones de Southside Auto Recycling.
+        </p>
+        <a href="https://www.instagram.com/" target="_blank" class="insta-btn">Ver perfil de Instagram</a>
+      </div>
+
+      <div class="feed-box">
+        <h2>Últimas Publicaciones</h2>
+
+        <div class="grid">
+          <div class="post-card">
+            <img src="insta1.jpg" alt="Publicación 1">
+            <div class="post-content">
+              <h3>Última Llegada</h3>
+              <p>Piezas usadas y nuevas actualizaciones de inventario.</p>
+              <a class="post-link" href="https://www.instagram.com/" target="_blank">Ver publicación</a>
+            </div>
+          </div>
+
+          <div class="post-card">
+            <img src="insta2.jpg" alt="Publicación 2">
+            <div class="post-content">
+              <h3>Piezas Disponibles</h3>
+              <p>Consulta piezas recientes y disponibilidad.</p>
+              <a class="post-link" href="https://www.instagram.com/" target="_blank">Ver publicación</a>
+            </div>
+          </div>
+
+          <div class="post-card">
+            <img src="insta3.jpg" alt="Publicación 3">
+            <div class="post-content">
+              <h3>Piezas de Carrocería</h3>
+              <p>Puertas, bumpers, espejos, faros y más.</p>
+              <a class="post-link" href="https://www.instagram.com/" target="_blank">Ver publicación</a>
+            </div>
+          </div>
+
+          <div class="post-card">
+            <img src="insta4.jpg" alt="Publicación 4">
+            <div class="post-content">
+              <h3>Motores y Transmisiones</h3>
+              <p>Piezas recicladas confiables listas para entrega.</p>
+              <a class="post-link" href="https://www.instagram.com/" target="_blank">Ver publicación</a>
+            </div>
+          </div>
+
+          <div class="post-card">
+            <img src="insta5.jpg" alt="Publicación 5">
+            <div class="post-content">
+              <h3>Actualizaciones</h3>
+              <p>Mira novedades y contenido reciente del negocio.</p>
+              <a class="post-link" href="https://www.instagram.com/" target="_blank">Ver publicación</a>
+            </div>
+          </div>
+
+          <div class="post-card">
+            <img src="insta6.jpg" alt="Publicación 6">
+            <div class="post-content">
+              <h3>Más de Southside</h3>
+              <p>Síguenos para ver más publicaciones recientes.</p>
+              <a class="post-link" href="https://www.instagram.com/" target="_blank">Ver publicación</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -261,6 +437,7 @@
         <p>7850 SE 110th St Rd</p>
         <p>Belleview, FL</p>
         <p>(352) 245-0640</p>
+        <p>sales@mmautoparts.net</p>
       </div>
 
       <div>
@@ -276,6 +453,24 @@
       © 2025 Southside Auto Recycling | M&M Auto Recycling LLC
     </div>
   </footer>
+
+  <script>
+    function showEnglish() {
+      document.getElementById("english").classList.remove("hidden");
+      document.getElementById("spanish").classList.add("hidden");
+      document.documentElement.lang = "en";
+    }
+
+    function showSpanish() {
+      document.getElementById("spanish").classList.remove("hidden");
+      document.getElementById("english").classList.add("hidden");
+      document.documentElement.lang = "es";
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      showEnglish();
+    });
+  </script>
 
 </body>
 </html>
