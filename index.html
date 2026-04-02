@@ -89,20 +89,15 @@
     .brand-text small {
       color: #666;
       font-size: 13px;
-    }
-
-    nav {
-      display: flex;
-      gap: 18px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: #111;
-      font-weight: bold;
-      font-size: 15px;
-    }
-
+   <nav>
+  <a href="index.html">Home</a>
+  <a href="#" onclick="goSection(event, 'parts')">Parts</a>
+  <a href="#" onclick="goSection(event, 'delivery')">Delivery</a>
+  <a href="#" onclick="goSection(event, 'location')">Location</a>
+  <a href="#" onclick="goSection(event, 'contact')">Contact</a>
+  <a href="part-request.html">Request a Part</a>
+  <a href="instagram.html">Instagram</a>
+</nav>
     nav a:hover {
       color: #d32f2f;
     }
