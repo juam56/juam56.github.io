@@ -216,6 +216,13 @@
       resize: vertical;
     }
 
+    .field small {
+      color: #666;
+      margin-top: 6px;
+      line-height: 1.5;
+      font-size: 12px;
+    }
+
     .full {
       grid-column: 1 / -1;
     }
@@ -350,6 +357,7 @@
     </div>
   </header>
 
+  <!-- ENGLISH -->
   <div id="english">
     <div class="page">
       <div class="intro">
@@ -419,6 +427,12 @@
             </div>
 
             <div class="field">
+              <label>VIN Number *</label>
+              <input type="text" name="VIN Number" placeholder="Vehicle VIN Number" required>
+              <small>VIN is required so we can identify the correct part for your vehicle.</small>
+            </div>
+
+            <div class="field">
               <label>Part Needed</label>
               <select name="Part Needed">
                 <option>Select Part Needed</option>
@@ -446,7 +460,7 @@
       </div>
 
       <div class="helper-box">
-        <h3>Need help faster?</h3>
+        <h3>Need help faster? 📞</h3>
         <p>📞 Call us directly at <strong>(352) 245-0640</strong></p>
         <p>📧 Email us at <strong>sales@mmautoparts.net</strong></p>
         <p>📍 7850 SE 110th St Rd, Belleview, FL</p>
@@ -455,6 +469,7 @@
     </div>
   </div>
 
+  <!-- SPANISH -->
   <div id="spanish" class="hidden">
     <div class="page">
       <div class="intro">
@@ -524,6 +539,12 @@
             </div>
 
             <div class="field">
+              <label>VIN Number *</label>
+              <input type="text" name="VIN Number" placeholder="VIN del Vehículo" required>
+              <small>El VIN es obligatorio para identificar correctamente la pieza de tu vehículo.</small>
+            </div>
+
+            <div class="field">
               <label>Pieza Necesaria</label>
               <select name="Pieza Necesaria">
                 <option>Selecciona la pieza</option>
@@ -551,7 +572,7 @@
       </div>
 
       <div class="helper-box">
-        <h3>¿Necesitas ayuda más rápido?</h3>
+        <h3>¿Necesitas ayuda más rápido? 📞</h3>
         <p>📞 Llámanos directamente al <strong>(352) 245-0640</strong></p>
         <p>📧 Escríbenos a <strong>sales@mmautoparts.net</strong></p>
         <p>📍 7850 SE 110th St Rd, Belleview, FL</p>
