@@ -202,18 +202,15 @@
       .footer-wrap {
         grid-template-columns: 1fr;
       }
-
       .hero h1 {
         font-size: 32px;
       }
-
       .lightwidget-widget {
         min-height: 2200px;
       }
     }
   </style>
 
-  <!-- LightWidget WIDGET -->
   <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
 </head>
 <body>
@@ -252,13 +249,10 @@
   </header>
 
   <div class="page">
-    <!-- ENGLISH -->
     <div id="english">
       <div class="hero">
         <h1>Instagram Feed</h1>
-        <p>
-          See our latest arrivals, updates, and available auto parts directly from our Instagram.
-        </p>
+        <p>See our latest arrivals, updates, and available auto parts directly from our Instagram.</p>
         <a href="https://www.instagram.com/" target="_blank" class="insta-btn">Open Instagram Profile</a>
       </div>
 
@@ -276,13 +270,10 @@
       </div>
     </div>
 
-    <!-- SPANISH -->
     <div id="spanish" class="hidden">
       <div class="hero">
         <h1>Feed de Instagram</h1>
-        <p>
-          Mira nuestras llegadas recientes, actualizaciones y piezas disponibles directamente desde nuestro Instagram.
-        </p>
+        <p>Mira nuestras llegadas recientes, actualizaciones y piezas disponibles directamente desde nuestro Instagram.</p>
         <a href="https://www.instagram.com/" target="_blank" class="insta-btn">Abrir perfil de Instagram</a>
       </div>
 
@@ -308,7 +299,6 @@
         <p><strong>Southside Auto Recycling</strong></p>
         <p>M&M Auto Recycling LLC</p>
       </div>
-
       <div>
         <h4>Contact</h4>
         <p>7850 SE 110th St Rd</p>
@@ -316,7 +306,6 @@
         <p><a href="tel:3522450640">(352) 245-0640</a></p>
         <p><a href="mailto:sales@mmautoparts.net">sales@mmautoparts.net</a></p>
       </div>
-
       <div>
         <h4>Service Areas</h4>
         <p>Orlando</p>
@@ -326,7 +315,6 @@
         <p>Clermont</p>
       </div>
     </div>
-
     <div class="copyright">
       © 2025 Southside Auto Recycling | M&M Auto Recycling LLC
     </div>
@@ -338,13 +326,11 @@
       document.getElementById("spanish").classList.add("hidden");
       document.documentElement.lang = "en";
     }
-
     function showSpanish() {
       document.getElementById("spanish").classList.remove("hidden");
       document.getElementById("english").classList.add("hidden");
       document.documentElement.lang = "es";
     }
-
     document.addEventListener("DOMContentLoaded", function () {
       showEnglish();
     });
