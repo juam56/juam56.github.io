@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thank You | Southside Auto Recycling</title>
+  <meta name="description" content="Thank you for contacting Southside Auto Recycling.">
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f5f7;
+      color: #111;
+    }
+
+    a { text-decoration: none; }
+    .hidden { display: none; }
+
+    .topbar {
+      background: #111;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 14px;
+    }
+
+    .topbar-wrap {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .lang-btn {
+      background: #d32f2f;
+      color: #fff;
+      border: none;
+      padding: 7px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .header-wrap {
+      max-width: 1200px;
+      margin: auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .brand img {
+      height: 68px;
+      width: auto;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 28px;
+      color: #d32f2f;
+      line-height: 1.1;
+    }
+
+    .brand-text small {
+      color: #666;
+      font-size: 13px;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #111;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #d32f2f;
+    }
+
+    .page {
+      max-width: 950px;
+      margin: auto;
+      padding: 70px 20px 90px;
+    }
+
+    .thank-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 45px 30px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0,0,0,.08);
+    }
+
+    .icon {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: #d32f2f;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+      font-weight: bold;
+    }
+
+    .thank-box h1 {
+      margin: 0 0 12px;
+      font-size: 42px;
+      color: #111;
+    }
+
+    .thank-box p {
+      max-width: 700px;
+      margin: 0 auto 14px;
+      color: #666;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .btn-row {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 15px;
+    }
+
+    .btn-primary {
+      background: #d32f2f;
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: #d32f2f;
+      border: 2px solid #d32f2f;
+    }
+
+    .helper {
+      margin-top: 24px;
+      color: #555;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    footer {
+      background: #000;
+      color: #fff;
+      padding: 40px 20px 25px;
+    }
+
+    .footer-wrap {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 24px;
+    }
+
+    .footer-logo {
+      max-width: 180px;
+      margin-bottom: 14px;
+    }
+
+    footer h4 {
+      margin-top: 0;
+    }
+
+    footer p,
+    footer a {
+      color: #ccc;
+      margin: 0 0 8px;
+      line-height: 1.8;
+    }
+
+    .copyright {
+      max-width: 1200px;
+      margin: 20px auto 0;
+      border-top: 1px solid #222;
+      padding-top: 18px;
+      color: #aaa;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      .footer-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .thank-box h1 {
+        font-size: 30px;
+      }
+
+      .thank-box {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="topbar-wrap">
+      <div>
+        📍 7850 SE 110th St Rd, Belleview, FL |
+        📞 <a href="tel:3522450640" style="color:#fff;">(352) 245-0640</a> |
+        📧 <a href="mailto:sales@mmautoparts.net" style="color:#fff;">sales@mmautoparts.net</a>
+      </div>
+      <div>
+        <button class="lang-btn" onclick="showEnglish()">EN</button>
+        <button class="lang-btn" onclick="showSpanish()">ES</button>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="header-wrap">
+      <div class="brand">
+        <img src="logo.png" alt="Southside Auto Recycling Logo">
+        <div class="brand-text">
+          <strong>Southside Auto Recycling</strong>
+          <small>M&M Auto Recycling LLC</small>
+        </div>
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="part-request.html">Request a Part</a>
+        <a href="instagram.html">Instagram</a>
+        <a href="warranty.html">Warranty</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ENGLISH -->
+  <div id="english">
+    <div class="page">
+      <div class="thank-box">
+        <div class="icon">✓</div>
+        <h1>Thank You!</h1>
+        <p>
+          Your parts request has been sent successfully.
+        </p>
+        <p>
+          Our team will review your information and contact you as soon as possible.
+        </p>
+
+        <div class="btn-row">
+          <a href="index.html" class="btn btn-primary">Back to Home</a>
+          <a href="part-request.html" class="btn btn-secondary">Submit Another Request</a>
+        </div>
+
+        <div class="helper">
+          Need immediate help? Call us at <strong>(352) 245-0640</strong> or email <strong>sales@mmautoparts.net</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPANISH -->
+  <div id="spanish" class="hidden">
+    <div class="page">
+      <div class="thank-box">
+        <div class="icon">✓</div>
+        <h1>¡Gracias!</h1>
+        <p>
+          Tu solicitud de pieza fue enviada correctamente.
+        </p>
+        <p>
+          Nuestro equipo revisará tu información y se pondrá en contacto contigo lo antes posible.
+        </p>
+
+        <div class="btn-row">
+          <a href="index.html" class="btn btn-primary">Volver al Inicio</a>
+          <a href="part-request.html" class="btn btn-secondary">Enviar Otra Solicitud</a>
+        </div>
+
+        <div class="helper">
+          ¿Necesitas ayuda inmediata? Llámanos al <strong>(352) 245-0640</strong> o escribe a <strong>sales@mmautoparts.net</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-wrap">
+      <div>
+        <img src="logo.png" alt="Southside Auto Recycling Logo" class="footer-logo">
+        <p><strong>Southside Auto Recycling</strong></p>
+        <p>M&M Auto Recycling LLC</p>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>7850 SE 110th St Rd</p>
+        <p>Belleview, FL</p>
+        <p><a href="tel:3522450640">(352) 245-0640</a></p>
+        <p><a href="mailto:sales@mmautoparts.net">sales@mmautoparts.net</a></p>
+      </div>
+
+      <div>
+        <h4>Service Areas</h4>
+        <p>Orlando</p>
+        <p>Ocala</p>
+        <p>The Villages</p>
+        <p>Leesburg</p>
+        <p>Clermont</p>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2025 Southside Auto Recycling | M&M Auto Recycling LLC
+    </div>
+  </footer>
+
+  <script>
+    function showEnglish() {
+      document.getElementById("english").classList.remove("hidden");
+      document.getElementById("spanish").classList.add("hidden");
+      document.documentElement.lang = "en";
+    }
+
+    function showSpanish() {
+      document.getElementById("spanish").classList.remove("hidden");
+      document.getElementById("english").classList.add("hidden");
+      document.documentElement.lang = "es";
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      showEnglish();
+    });
+  </script>
+
+</body>
+</html>
