@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Instagram | Southside Auto Recycling</title>
+  <meta name="description" content="Instagram feed for Southside Auto Recycling.">
   <style>
     * { box-sizing: border-box; }
 
@@ -147,54 +148,16 @@
       margin-bottom: 25px;
     }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .post-card {
-      background: #fff;
-      border: 1px solid #e5e5e5;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,.06);
-      transition: transform 0.2s ease;
-    }
-
-    .post-card:hover {
-      transform: translateY(-4px);
-    }
-
-    .post-card img {
+    .widget-wrap {
       width: 100%;
-      height: 260px;
-      object-fit: cover;
-      display: block;
+      min-height: 1400px;
     }
 
-    .post-content {
-      padding: 14px;
-    }
-
-    .post-content h3 {
-      margin: 0 0 8px;
-      font-size: 18px;
-      color: #111;
-    }
-
-    .post-content p {
-      margin: 0 0 12px;
-      color: #666;
-      line-height: 1.6;
-      font-size: 14px;
-    }
-
-    .post-link {
-      display: inline-block;
-      color: #d32f2f;
-      font-weight: bold;
-      font-size: 14px;
+    .lightwidget-widget {
+      width: 100%;
+      border: 0;
+      overflow: hidden;
+      min-height: 1400px;
     }
 
     footer {
@@ -237,7 +200,6 @@
     }
 
     @media (max-width: 900px) {
-      .grid,
       .footer-wrap {
         grid-template-columns: 1fr;
       }
@@ -245,14 +207,25 @@
       .hero h1 {
         font-size: 32px;
       }
+
+      .widget-wrap,
+      .lightwidget-widget {
+        min-height: 2200px;
+      }
     }
   </style>
+
+  <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script>
 </head>
 <body>
 
   <div class="topbar">
     <div class="topbar-wrap">
-      <div>📍 7850 SE 110th St Rd, Belleview, FL | 📞 (352) 245-0640</div>
+      <div>
+        📍 7850 SE 110th St Rd, Belleview, FL |
+        📞 <a href="tel:3522450640" style="color:#fff;">(352) 245-0640</a> |
+        📧 <a href="mailto:sales@mmautoparts.net" style="color:#fff;">sales@mmautoparts.net</a>
+      </div>
       <div>
         <button class="lang-btn" onclick="showEnglish()">EN</button>
         <button class="lang-btn" onclick="showSpanish()">ES</button>
@@ -279,145 +252,49 @@
     </div>
   </header>
 
-  <div id="english">
-    <div class="page">
+  <div class="page">
+    <!-- ENGLISH -->
+    <div id="english">
       <div class="hero">
-        <h1>Instagram Posts</h1>
+        <h1>Instagram Feed</h1>
         <p>
-          See our latest parts, arrivals, and updates from Southside Auto Recycling.
+          See our latest arrivals, updates, and available auto parts directly from our Instagram.
         </p>
-        <a href="https://www.instagram.com/" target="_blank" class="insta-btn">Visit Instagram Profile</a>
+        <a href="https://www.instagram.com/" target="_blank" class="insta-btn">Open Instagram Profile</a>
       </div>
 
       <div class="feed-box">
-        <h2>Latest Posts</h2>
-
-        <div class="grid">
-          <div class="post-card">
-            <img src="insta1.jpg" alt="Instagram post 1">
-            <div class="post-content">
-              <h3>Latest Arrival</h3>
-              <p>Used auto parts and new inventory updates.</p>
-              <a class="post-link" href="https://www.instagram.com/" target="_blank">View post</a>
-            </div>
-          </div>
-
-          <div class="post-card">
-            <img src="insta2.jpg" alt="Instagram post 2">
-            <div class="post-content">
-              <h3>Parts in Stock</h3>
-              <p>Check our recent parts and available inventory.</p>
-              <a class="post-link" href="https://www.instagram.com/" target="_blank">View post</a>
-            </div>
-          </div>
-
-          <div class="post-card">
-            <img src="insta3.jpg" alt="Instagram post 3">
-            <div class="post-content">
-              <h3>Body Parts</h3>
-              <p>Doors, bumpers, mirrors, headlights and more.</p>
-              <a class="post-link" href="https://www.instagram.com/" target="_blank">View post</a>
-            </div>
-          </div>
-
-          <div class="post-card">
-            <img src="insta4.jpg" alt="Instagram post 4">
-            <div class="post-content">
-              <h3>Engines & Transmissions</h3>
-              <p>Reliable recycled parts ready to go.</p>
-              <a class="post-link" href="https://www.instagram.com/" target="_blank">View post</a>
-            </div>
-          </div>
-
-          <div class="post-card">
-            <img src="insta5.jpg" alt="Instagram post 5">
-            <div class="post-content">
-              <h3>Customer Updates</h3>
-              <p>See highlights and service updates from our business.</p>
-              <a class="post-link" href="https://www.instagram.com/" target="_blank">View post</a>
-            </div>
-          </div>
-
-          <div class="post-card">
-            <img src="insta6.jpg" alt="Instagram post 6">
-            <div class="post-content">
-              <h3>More From Southside</h3>
-              <p>Follow us to stay updated with our latest posts.</p>
-              <a class="post-link" href="https://www.instagram.com/" target="_blank">View post</a>
-            </div>
-          </div>
+        <h2>Latest Instagram Posts</h2>
+        <div class="widget-wrap">
+          <iframe
+            src="https://lightwidget.com/widgets/36226ef6e2145f7e9e261ba458e80d9a.html"
+            scrolling="no"
+            allowtransparency="true"
+            class="lightwidget-widget">
+          </iframe>
         </div>
       </div>
     </div>
-  </div>
 
-  <div id="spanish" class="hidden">
-    <div class="page">
+    <!-- SPANISH -->
+    <div id="spanish" class="hidden">
       <div class="hero">
-        <h1>Publicaciones de Instagram</h1>
+        <h1>Feed de Instagram</h1>
         <p>
-          Mira nuestras piezas recientes, llegadas nuevas y actualizaciones de Southside Auto Recycling.
+          Mira nuestras llegadas recientes, actualizaciones y piezas disponibles directamente desde nuestro Instagram.
         </p>
-        <a href="https://www.instagram.com/" target="_blank" class="insta-btn">Ver perfil de Instagram</a>
+        <a href="https://www.instagram.com/southsideautorecycling/" target="_blank" class="insta-btn">
       </div>
 
       <div class="feed-box">
-        <h2>Últimas Publicaciones</h2>
-
-        <div class="grid">
-          <div class="post-card">
-            <img src="insta1.jpg" alt="Publicación 1">
-            <div class="post-content">
-              <h3>Última Llegada</h3>
-              <p>Piezas usadas y nuevas actualizaciones de inventario.</p>
-              <a class="post-link" href="https://www.instagram.com/" target="_blank">Ver publicación</a>
-            </div>
-          </div>
-
-          <div class="post-card">
-            <img src="insta2.jpg" alt="Publicación 2">
-            <div class="post-content">
-              <h3>Piezas Disponibles</h3>
-              <p>Consulta piezas recientes y disponibilidad.</p>
-              <a class="post-link" href="https://www.instagram.com/" target="_blank">Ver publicación</a>
-            </div>
-          </div>
-
-          <div class="post-card">
-            <img src="insta3.jpg" alt="Publicación 3">
-            <div class="post-content">
-              <h3>Piezas de Carrocería</h3>
-              <p>Puertas, bumpers, espejos, faros y más.</p>
-              <a class="post-link" href="https://www.instagram.com/" target="_blank">Ver publicación</a>
-            </div>
-          </div>
-
-          <div class="post-card">
-            <img src="insta4.jpg" alt="Publicación 4">
-            <div class="post-content">
-              <h3>Motores y Transmisiones</h3>
-              <p>Piezas recicladas confiables listas para entrega.</p>
-              <a class="post-link" href="https://www.instagram.com/" target="_blank">Ver publicación</a>
-            </div>
-          </div>
-
-          <div class="post-card">
-            <img src="insta5.jpg" alt="Publicación 5">
-            <div class="post-content">
-              <h3>Actualizaciones</h3>
-              <p>Mira novedades y contenido reciente del negocio.</p>
-              <a class="post-link" href="https://www.instagram.com/" target="_blank">Ver publicación</a>
-            </div>
-          </div>
-
-          <div class="post-card">
-            <img src="insta6.jpg" alt="Publicación 6">
-            <div class="post-content">
-              <h3>Más de Southside</h3>
-              <p>Síguenos para ver más publicaciones recientes.</p>
-              <a class="post-link" href="https://www.instagram.com/" target="_blank">Ver publicación</a>
-            </div>
-          </div>
+        <h2>Últimas publicaciones</h2>
+        <div class="widget-wrap">
+          <iframe
+            src="https://lightwidget.com/widgets/36226ef6e2145f7e9e261ba458e80d9a.html"
+            scrolling="no"
+            allowtransparency="true"
+            class="lightwidget-widget">
+          </iframe>
         </div>
       </div>
     </div>
@@ -448,6 +325,7 @@
         <p>Clermont</p>
       </div>
     </div>
+
     <div class="copyright">
       © 2025 Southside Auto Recycling | M&M Auto Recycling LLC
     </div>
