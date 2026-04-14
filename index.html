@@ -7,17 +7,13 @@
   <meta name="description" content="Southside Auto Recycling - Quality used auto parts in Belleview, FL with delivery to Orlando, Ocala, The Villages, Leesburg, and Clermont.">
   <style>
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f5f7;
       color: #111;
     }
-
     a { text-decoration: none; }
-    img { max-width: 100%; }
     .hidden { display: none; }
 
     .topbar {
@@ -26,25 +22,15 @@
       padding: 10px 20px;
       font-size: 14px;
     }
-
     .topbar-wrap {
       max-width: 1200px;
       margin: auto;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      gap: 15px;
       flex-wrap: wrap;
-    }
-
-    .topbar-left,
-    .topbar-right {
-      display: flex;
+      gap: 10px;
       align-items: center;
-      gap: 15px;
-      flex-wrap: wrap;
     }
-
     .lang-btn {
       background: #d32f2f;
       color: #fff;
@@ -62,7 +48,6 @@
       top: 0;
       z-index: 999;
     }
-
     .header-wrap {
       max-width: 1200px;
       margin: auto;
@@ -70,29 +55,24 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
       flex-wrap: wrap;
+      gap: 20px;
     }
-
     .brand {
       display: flex;
       align-items: center;
       gap: 15px;
     }
-
     .brand img {
       height: 68px;
       width: auto;
-      display: block;
     }
-
     .brand-text strong {
       display: block;
       font-size: 28px;
       color: #d32f2f;
       line-height: 1.1;
     }
-
     .brand-text small {
       color: #666;
       font-size: 13px;
@@ -103,13 +83,11 @@
       gap: 18px;
       flex-wrap: wrap;
     }
-
     nav a {
       color: #111;
       font-weight: bold;
       font-size: 15px;
     }
-
     nav a:hover {
       color: #d32f2f;
     }
@@ -121,22 +99,15 @@
       color: white;
       padding: 90px 20px;
     }
-
     .hero-wrap {
       max-width: 1200px;
       margin: auto;
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 30px;
-      align-items: center;
     }
-
     .hero h1 {
       font-size: 48px;
       margin: 0 0 15px;
       line-height: 1.1;
     }
-
     .hero p {
       font-size: 18px;
       line-height: 1.7;
@@ -144,39 +115,26 @@
       max-width: 760px;
       margin-bottom: 25px;
     }
-
     .hero-buttons {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
     }
-
     .btn {
       display: inline-block;
       padding: 14px 22px;
       border-radius: 8px;
       font-weight: bold;
       font-size: 15px;
-      transition: 0.2s ease;
     }
-
     .btn-primary {
       background: #d32f2f;
       color: #fff;
     }
-
-    .btn-primary:hover {
-      background: #b71c1c;
-    }
-
     .btn-secondary {
       background: #fff;
       color: #d32f2f;
       border: 2px solid #d32f2f;
-    }
-
-    .btn-secondary:hover {
-      background: #f8f8f8;
     }
 
     .info-strip {
@@ -184,7 +142,6 @@
       color: #fff;
       padding: 18px 20px;
     }
-
     .info-strip-wrap {
       max-width: 1200px;
       margin: auto;
@@ -193,7 +150,6 @@
       gap: 18px;
       text-align: center;
     }
-
     .info-item strong {
       display: block;
       font-size: 20px;
@@ -205,18 +161,15 @@
       margin: auto;
       padding: 60px 20px;
     }
-
     .section-title {
       text-align: center;
       margin-bottom: 35px;
     }
-
     .section-title h2 {
       margin: 0 0 10px;
       font-size: 34px;
       color: #111;
     }
-
     .section-title p {
       margin: 0;
       color: #666;
@@ -229,22 +182,18 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
     }
-
     .card {
       background: #fff;
       padding: 26px;
       border-radius: 12px;
       box-shadow: 0 4px 14px rgba(0,0,0,.08);
     }
-
     .card h3 {
       margin-top: 0;
       color: #d32f2f;
       font-size: 22px;
     }
-
-    .card p,
-    .card li {
+    .card p, .card li {
       color: #555;
       line-height: 1.7;
     }
@@ -254,29 +203,28 @@
       grid-template-columns: 1fr 1fr;
       gap: 24px;
     }
-
     .box {
       background: #fff;
       border-radius: 12px;
       padding: 28px;
       box-shadow: 0 4px 14px rgba(0,0,0,.08);
     }
-
     .box h3 {
       margin-top: 0;
       font-size: 24px;
       color: #111;
     }
-
-    .box p,
-    .box li {
+    .box p, .box li {
       color: #555;
       line-height: 1.7;
     }
-
     .box ul {
       padding-left: 20px;
       margin: 0;
+    }
+    .box a {
+      color: #d32f2f;
+      font-weight: bold;
     }
 
     .map-box iframe {
@@ -292,12 +240,10 @@
       text-align: center;
       padding: 60px 20px;
     }
-
     .cta-band h2 {
       margin-top: 0;
       font-size: 36px;
     }
-
     .cta-band p {
       max-width: 760px;
       margin: 0 auto 20px;
@@ -308,34 +254,27 @@
     footer {
       background: #000;
       color: #fff;
-      padding: 45px 20px 25px;
+      padding: 40px 20px 25px;
     }
-
     .footer-wrap {
       max-width: 1200px;
       margin: auto;
       display: grid;
-      grid-template-columns: 1.1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 24px;
     }
-
     .footer-logo {
       max-width: 180px;
       margin-bottom: 14px;
     }
-
     footer h4 {
       margin-top: 0;
-      margin-bottom: 12px;
-      font-size: 20px;
     }
-
-    footer p {
+    footer p, footer a {
       color: #ccc;
-      line-height: 1.8;
       margin: 0 0 8px;
+      line-height: 1.8;
     }
-
     .copyright {
       max-width: 1200px;
       margin: 20px auto 0;
@@ -346,29 +285,15 @@
       font-size: 14px;
     }
 
-    @media (max-width: 950px) {
+    @media (max-width: 900px) {
+      .info-strip-wrap,
       .cards-3,
       .two-col,
-      .footer-wrap,
-      .info-strip-wrap {
+      .footer-wrap {
         grid-template-columns: 1fr;
       }
-
       .hero h1 {
         font-size: 34px;
-      }
-
-      .header-wrap {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .brand {
-        align-items: flex-start;
-      }
-
-      nav {
-        width: 100%;
       }
     }
   </style>
@@ -377,11 +302,12 @@
 
   <div class="topbar">
     <div class="topbar-wrap">
-      <div class="topbar-left">
-        <span>📍 7850 SE 110th St Rd, Belleview, FL</span>
-        <span>📞 <a href="tel:3522450640" style="color:#fff;">(352) 245-0640</a></span>
+      <div>
+        📍 7850 SE 110th St Rd, Belleview, FL |
+        📞 <a href="tel:3522450640" style="color:#fff;">(352) 245-0640</a> |
+        📧 <a href="mailto:sales@mmautoparts.net" style="color:#fff;">sales@mmautoparts.net</a>
       </div>
-      <div class="topbar-right">
+      <div>
         <button class="lang-btn" onclick="showEnglish()">EN</button>
         <button class="lang-btn" onclick="showSpanish()">ES</button>
       </div>
@@ -397,82 +323,60 @@
           <small>M&M Auto Recycling LLC</small>
         </div>
       </div>
-
       <nav>
         <a href="index.html">Home</a>
-        <a href="#" onclick="goSection(event, 'parts')">Parts</a>
-        <a href="#" onclick="goSection(event, 'delivery')">Delivery</a>
-        <a href="#" onclick="goSection(event, 'location')">Location</a>
-        <a href="#" onclick="goSection(event, 'contact')">Contact</a>
         <a href="part-request.html">Request a Part</a>
         <a href="instagram.html">Instagram</a>
+        <a href="warranty.html">Warranty</a>
       </nav>
     </div>
   </header>
 
-  <!-- ENGLISH -->
   <div id="english">
     <section class="hero">
       <div class="hero-wrap">
-        <div>
-          <h1>Quality Used Auto Parts You Can Rely On</h1>
-          <p>
-            Southside Auto Recycling helps customers and repair shops find dependable recycled auto parts with quick quotes, local pickup, and delivery to Orlando, Ocala, The Villages, Leesburg, and Clermont.
-          </p>
-          <div class="hero-buttons">
-            <a href="tel:3522450640" class="btn btn-primary">Call Now</a>
-            <a href="part-request.html" class="btn btn-secondary">Request a Part</a>
-          </div>
+        <h1>Quality Used Auto Parts You Can Rely On</h1>
+        <p>
+          Southside Auto Recycling helps customers and repair shops find dependable recycled auto parts with quick quotes, local pickup, and delivery to Orlando, Ocala, The Villages, Leesburg, and Clermont.
+        </p>
+        <div class="hero-buttons">
+          <a href="tel:3522450640" class="btn btn-primary">Call Now</a>
+          <a href="part-request.html" class="btn btn-secondary">Request a Part</a>
         </div>
       </div>
     </section>
 
     <section class="info-strip">
       <div class="info-strip-wrap">
-        <div class="info-item">
-          <strong>Belleview, FL</strong>
-          Local Pickup Available
-        </div>
-        <div class="info-item">
-          <strong>Fast Quotes</strong>
-          Friendly Service
-        </div>
-        <div class="info-item">
-          <strong>Delivery Areas</strong>
-          Orlando, Ocala & More
-        </div>
-        <div class="info-item">
-          <strong>Call Today</strong>
-          (352) 245-0640
-        </div>
+        <div class="info-item"><strong>Belleview, FL</strong>Local Pickup Available</div>
+        <div class="info-item"><strong>Fast Quotes</strong>Friendly Service</div>
+        <div class="info-item"><strong>Delivery Areas</strong>Orlando, Ocala & More</div>
+        <div class="info-item"><strong>Call Today</strong>(352) 245-0640</div>
       </div>
     </section>
 
-    <section class="section" id="parts-en">
+    <section class="section">
       <div class="section-title">
         <h2>Used Parts & Services</h2>
         <p>Reliable recycled auto parts for cars, trucks, and more.</p>
       </div>
-
       <div class="cards-3">
         <div class="card">
           <h3>Engines & Transmissions</h3>
           <p>Quality used powertrain parts inspected for value and dependable performance.</p>
         </div>
-
         <div class="card">
           <h3>Body Parts</h3>
           <p>Doors, hoods, fenders, bumpers, mirrors, headlights, and other exterior replacement parts.</p>
         </div>
-
         <div class="card">
           <h3>Fast Part Requests</h3>
-          <p>Call or send your vehicle details and we’ll help you locate the part you need quickly.</p>
+          <p>Send us your vehicle details and we’ll help you locate the part you need quickly.</p>
         </div>
       </div>
     </section>
 
-    <section class="section" id="delivery-en">
+    <section class="section">
       <div class="two-col">
         <div class="box">
           <h3>Delivery Areas</h3>
@@ -485,7 +389,6 @@
             <li>Local pickup available in Belleview</li>
           </ul>
         </div>
-
         <div class="box">
           <h3>Why Choose Us</h3>
           <ul>
@@ -499,36 +402,21 @@
       </div>
     </section>
 
-    <section class="section" id="about-en">
-      <div class="section-title">
-        <h2>About Southside Auto Recycling</h2>
-        <p>Your local source for quality used auto parts in Belleview, Florida.</p>
-      </div>
-
-      <div class="box">
-        <p>
-          Southside Auto Recycling is focused on helping customers find dependable used auto parts at fair prices. We serve Belleview and surrounding areas with local pickup, delivery to nearby cities, and reliable customer support. Whether you need an engine, transmission, or body part, we are ready to help.
-        </p>
-      </div>
-    </section>
-
-    <section class="section" id="location-en">
+    <section class="section">
       <div class="section-title">
         <h2>Visit Us</h2>
-        <p>Come by our Belleview location or call us for parts availability.</p>
+        <p>Come by our Belleview location or contact us for parts availability.</p>
       </div>
-
       <div class="two-col">
-       <div class="box">
-  <h3>Belleview, FL</h3>
-  <p><strong>Business:</strong> Southside Auto Recycling</p>
-  <p><strong>Company:</strong> M&M Auto Recycling LLC</p>
-  <p><strong>Address:</strong> 7850 SE 110th St Rd, Belleview, FL</p>
-  <p><strong>Phone:</strong> <a href="tel:3522450640">(352) 245-0640</a></p>
-  <p><strong>Email:</strong> <a href="mailto:sales@mmautoparts.net">sales@mmautoparts.net</a></p>
-  <p><strong>Service Areas:</strong> Orlando, Ocala, The Villages, Leesburg, Clermont</p>
-</div>
-
+        <div class="box">
+          <h3>Belleview, FL</h3>
+          <p><strong>Business:</strong> Southside Auto Recycling</p>
+          <p><strong>Company:</strong> M&M Auto Recycling LLC</p>
+          <p><strong>Address:</strong> 7850 SE 110th St Rd, Belleview, FL</p>
+          <p><strong>Phone:</strong> <a href="tel:3522450640">(352) 245-0640</a></p>
+          <p><strong>Email:</strong> <a href="mailto:sales@mmautoparts.net">sales@mmautoparts.net</a></p>
+          <p><strong>Service Areas:</strong> Orlando, Ocala, The Villages, Leesburg, Clermont</p>
+        </div>
         <div class="box map-box">
           <h3>Map</h3>
           <iframe
@@ -542,76 +430,56 @@
 
     <section class="cta-band">
       <h2>Need a Part Fast?</h2>
-      <p>
-        Call Southside Auto Recycling today and let us help you find the right used auto part for your vehicle.
-      </p>
+      <p>Call Southside Auto Recycling today and let us help you find the right used auto part for your vehicle.</p>
       <a href="tel:3522450640" class="btn btn-primary">Call (352) 245-0640</a>
     </section>
   </div>
 
-  <!-- SPANISH -->
   <div id="spanish" class="hidden">
     <section class="hero">
       <div class="hero-wrap">
-        <div>
-          <h1>Piezas usadas de auto en las que puedes confiar</h1>
-          <p>
-            Southside Auto Recycling ayuda a clientes y talleres a encontrar piezas recicladas confiables con cotizaciones rápidas, recogida local y entrega a Orlando, Ocala, The Villages, Leesburg y Clermont.
-          </p>
-          <div class="hero-buttons">
-            <a href="tel:3522450640" class="btn btn-primary">Llamar Ahora</a>
-            <a href="part-request.html" class="btn btn-secondary">Solicitar Pieza</a>
-          </div>
+        <h1>Piezas usadas de auto en las que puedes confiar</h1>
+        <p>
+          Southside Auto Recycling ayuda a clientes y talleres a encontrar piezas recicladas confiables con cotizaciones rápidas, recogida local y entrega a Orlando, Ocala, The Villages, Leesburg y Clermont.
+        </p>
+        <div class="hero-buttons">
+          <a href="tel:3522450640" class="btn btn-primary">Llamar Ahora</a>
+          <a href="part-request.html" class="btn btn-secondary">Solicitar Pieza</a>
         </div>
       </div>
     </section>
 
     <section class="info-strip">
       <div class="info-strip-wrap">
-        <div class="info-item">
-          <strong>Belleview, FL</strong>
-          Recogida Local Disponible
-        </div>
-        <div class="info-item">
-          <strong>Cotizaciones Rápidas</strong>
-          Servicio Amable
-        </div>
-        <div class="info-item">
-          <strong>Áreas de Entrega</strong>
-          Orlando, Ocala y Más
-        </div>
-        <div class="info-item">
-          <strong>Llama Hoy</strong>
-          (352) 245-0640
-        </div>
+        <div class="info-item"><strong>Belleview, FL</strong>Recogida Local Disponible</div>
+        <div class="info-item"><strong>Cotizaciones Rápidas</strong>Servicio Amable</div>
+        <div class="info-item"><strong>Áreas de Entrega</strong>Orlando, Ocala y Más</div>
+        <div class="info-item"><strong>Llama Hoy</strong>(352) 245-0640</div>
       </div>
     </section>
 
-    <section class="section" id="parts-es">
+    <section class="section">
       <div class="section-title">
         <h2>Piezas y Servicios</h2>
         <p>Piezas recicladas confiables para carros, trucks y más.</p>
       </div>
-
       <div class="cards-3">
         <div class="card">
           <h3>Motores y Transmisiones</h3>
           <p>Piezas usadas inspeccionadas para ofrecer valor y funcionamiento confiable.</p>
         </div>
-
         <div class="card">
           <h3>Piezas de Carrocería</h3>
           <p>Puertas, cofres, guardafangos, bumpers, espejos, faros y otras piezas exteriores.</p>
         </div>
-
         <div class="card">
           <h3>Solicitud Rápida de Piezas</h3>
-          <p>Llámanos o envíanos la información del vehículo y te ayudamos a encontrar la pieza.</p>
+          <p>Envíanos la información del vehículo y te ayudamos a encontrar la pieza.</p>
         </div>
       </div>
     </section>
 
-    <section class="section" id="delivery-es">
+    <section class="section">
       <div class="two-col">
         <div class="box">
           <h3>Áreas de Entrega</h3>
@@ -624,7 +492,6 @@
             <li>Recogida local disponible en Belleview</li>
           </ul>
         </div>
-
         <div class="box">
           <h3>Por Qué Elegirnos</h3>
           <ul>
@@ -638,36 +505,21 @@
       </div>
     </section>
 
-    <section class="section" id="about-es">
-      <div class="section-title">
-        <h2>Sobre Southside Auto Recycling</h2>
-        <p>Tu fuente local de piezas usadas de calidad en Belleview, Florida.</p>
-      </div>
-
-      <div class="box">
-        <p>
-          Southside Auto Recycling se enfoca en ayudar a los clientes a encontrar piezas usadas confiables a precios justos. Atendemos Belleview y áreas cercanas con recogida local, entregas a ciudades cercanas y atención confiable. Ya sea que necesites un motor, transmisión o pieza de carrocería, estamos listos para ayudarte.
-        </p>
-      </div>
-    </section>
-
-    <section class="section" id="location-es">
+    <section class="section">
       <div class="section-title">
         <h2>Visítanos</h2>
-        <p>Pasa por nuestra ubicación en Belleview o llámanos para disponibilidad de piezas.</p>
+        <p>Pasa por nuestra ubicación en Belleview o contáctanos para disponibilidad.</p>
       </div>
-
       <div class="two-col">
         <div class="box">
-  <h3>Belleview, FL</h3>
-  <p><strong>Negocio:</strong> Southside Auto Recycling</p>
-  <p><strong>Compañía:</strong> M&M Auto Recycling LLC</p>
-  <p><strong>Dirección:</strong> 7850 SE 110th St Rd, Belleview, FL</p>
-  <p><strong>Teléfono:</strong> <a href="tel:3522450640">(352) 245-0640</a></p>
-  <p><strong>Email:</strong> <a href="mailto:sales@mmautoparts.net">sales@mmautoparts.net</a></p>
-  <p><strong>Áreas de servicio:</strong> Orlando, Ocala, The Villages, Leesburg, Clermont</p>
-</div>
-
+          <h3>Belleview, FL</h3>
+          <p><strong>Negocio:</strong> Southside Auto Recycling</p>
+          <p><strong>Compañía:</strong> M&M Auto Recycling LLC</p>
+          <p><strong>Dirección:</strong> 7850 SE 110th St Rd, Belleview, FL</p>
+          <p><strong>Teléfono:</strong> <a href="tel:3522450640">(352) 245-0640</a></p>
+          <p><strong>Email:</strong> <a href="mailto:sales@mmautoparts.net">sales@mmautoparts.net</a></p>
+          <p><strong>Áreas de servicio:</strong> Orlando, Ocala, The Villages, Leesburg, Clermont</p>
+        </div>
         <div class="box map-box">
           <h3>Mapa</h3>
           <iframe
@@ -681,29 +533,25 @@
 
     <section class="cta-band">
       <h2>¿Necesitas una Pieza Rápido?</h2>
-      <p>
-        Llama hoy a Southside Auto Recycling y te ayudamos a encontrar la pieza usada correcta para tu vehículo.
-      </p>
+      <p>Llama hoy a Southside Auto Recycling y te ayudamos a encontrar la pieza usada correcta para tu vehículo.</p>
       <a href="tel:3522450640" class="btn btn-primary">Llamar al (352) 245-0640</a>
     </section>
   </div>
 
-  <footer id="contact">
+  <footer>
     <div class="footer-wrap">
       <div>
         <img src="logo.png" alt="Southside Auto Recycling Logo" class="footer-logo">
         <p><strong>Southside Auto Recycling</strong></p>
         <p>M&M Auto Recycling LLC</p>
-        <p>Quality used auto parts you can rely on.</p>
       </div>
-
       <div>
-  <h4>Contact</h4>
-  <p>7850 SE 110th St Rd</p>
-  <p>Belleview, FL</p>
-  <p><a href="tel:3522450640" style="color:#ccc;">(352) 245-0640</a></p>
-  <p><a href="mailto:sales@mmautoparts.net" style="color:#ccc;">sales@mmautoparts.net</a></p>
-</div>
+        <h4>Contact</h4>
+        <p>7850 SE 110th St Rd</p>
+        <p>Belleview, FL</p>
+        <p><a href="tel:3522450640">(352) 245-0640</a></p>
+        <p><a href="mailto:sales@mmautoparts.net">sales@mmautoparts.net</a></p>
+      </div>
       <div>
         <h4>Service Areas</h4>
         <p>Orlando</p>
@@ -713,46 +561,22 @@
         <p>Clermont</p>
       </div>
     </div>
-
     <div class="copyright">
       © 2025 Southside Auto Recycling | M&M Auto Recycling LLC
     </div>
   </footer>
 
   <script>
-    let currentLang = "en";
-
     function showEnglish() {
-      currentLang = "en";
       document.getElementById("english").classList.remove("hidden");
       document.getElementById("spanish").classList.add("hidden");
       document.documentElement.lang = "en";
     }
-
     function showSpanish() {
-      currentLang = "es";
       document.getElementById("spanish").classList.remove("hidden");
       document.getElementById("english").classList.add("hidden");
       document.documentElement.lang = "es";
     }
-
-    function goSection(event, sectionName) {
-      event.preventDefault();
-
-      let targetId = "";
-
-      if (sectionName === "contact") {
-        targetId = "contact";
-      } else {
-        targetId = currentLang === "es" ? sectionName + "-es" : sectionName + "-en";
-      }
-
-      const section = document.getElementById(targetId);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-
     document.addEventListener("DOMContentLoaded", function () {
       showEnglish();
     });
