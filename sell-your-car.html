@@ -7,14 +7,12 @@
   <meta name="description" content="Sell your vehicle to Southside Auto Recycling.">
   <style>
     * { box-sizing: border-box; }
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f5f7;
       color: #111;
     }
-
     a { text-decoration: none; }
     .hidden { display: none; }
 
@@ -24,7 +22,6 @@
       padding: 10px 20px;
       font-size: 14px;
     }
-
     .topbar-wrap {
       max-width: 1100px;
       margin: auto;
@@ -34,7 +31,6 @@
       flex-wrap: wrap;
       align-items: center;
     }
-
     .lang-btn {
       background: #d32f2f;
       color: #fff;
@@ -49,7 +45,6 @@
       background: #fff;
       border-bottom: 1px solid #ddd;
     }
-
     .header-wrap {
       max-width: 1100px;
       margin: auto;
@@ -60,25 +55,21 @@
       gap: 20px;
       flex-wrap: wrap;
     }
-
     .brand {
       display: flex;
       align-items: center;
       gap: 14px;
     }
-
     .brand img {
       height: 60px;
       width: auto;
     }
-
     .brand-text strong {
       display: block;
       color: #d32f2f;
       font-size: 26px;
       line-height: 1.1;
     }
-
     .brand-text small {
       color: #666;
       font-size: 13px;
@@ -89,13 +80,11 @@
       gap: 16px;
       flex-wrap: wrap;
     }
-
     nav a {
       color: #111;
       font-weight: bold;
       font-size: 15px;
     }
-
     nav a:hover {
       color: #d32f2f;
     }
@@ -175,7 +164,6 @@
       display: block;
       font-weight: normal;
       margin-bottom: 10px;
-      cursor: pointer;
     }
 
     .check-group input,
@@ -205,22 +193,11 @@
       box-shadow: 0 4px 14px rgba(0,0,0,.06);
     }
 
-    .help-box h3 {
-      margin-top: 0;
-    }
-
-    .help-box p {
-      color: #666;
-      line-height: 1.7;
-      margin: 6px 0;
-    }
-
     footer {
       background: #000;
       color: #fff;
       padding: 35px 20px 20px;
     }
-
     .footer-wrap {
       max-width: 1100px;
       margin: auto;
@@ -228,22 +205,18 @@
       grid-template-columns: 1fr 1fr 1fr;
       gap: 20px;
     }
-
     .footer-logo {
       max-width: 160px;
       margin-bottom: 10px;
     }
-
     footer h4 {
       margin-top: 0;
     }
-
     footer p, footer a {
       color: #ccc;
       line-height: 1.8;
       margin: 0 0 6px;
     }
-
     .copyright {
       max-width: 1100px;
       margin: 20px auto 0;
@@ -258,7 +231,6 @@
       .grid, .footer-wrap {
         grid-template-columns: 1fr;
       }
-
       .title-box h1 {
         font-size: 30px;
       }
@@ -293,14 +265,13 @@
       <nav>
         <a href="index.html">Home</a>
         <a href="part-request.html">Request a Part</a>
-        <a href="instagram.html">Last Arrivals</a>
+        <a href="last-arrivals.html">Last Arrivals</a>
         <a href="sell-your-car.html">Sell Your Car</a>
         <a href="warranty.html">Warranty</a>
       </nav>
     </div>
   </header>
 
-  <!-- ENGLISH -->
   <div id="english">
     <div class="page">
       <div class="title-box">
@@ -373,7 +344,6 @@
     </div>
   </div>
 
-  <!-- SPANISH -->
   <div id="spanish" class="hidden">
     <div class="page">
       <div class="title-box">
@@ -480,13 +450,11 @@
       document.getElementById("spanish").classList.add("hidden");
       document.documentElement.lang = "en";
     }
-
     function showSpanish() {
       document.getElementById("spanish").classList.remove("hidden");
       document.getElementById("english").classList.add("hidden");
       document.documentElement.lang = "es";
     }
-
     document.addEventListener("DOMContentLoaded", function () {
       showEnglish();
     });
