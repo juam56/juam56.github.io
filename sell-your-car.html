@@ -5,237 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sell Your Car | Southside Auto Recycling</title>
   <meta name="description" content="Sell your vehicle to Southside Auto Recycling.">
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f5f7;
-      color: #111;
-    }
-    a { text-decoration: none; }
-    .hidden { display: none; }
-
-    .topbar {
-      background: #111;
-      color: #fff;
-      padding: 10px 20px;
-      font-size: 14px;
-    }
-    .topbar-wrap {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .lang-btn {
-      background: #d32f2f;
-      color: #fff;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    header {
-      background: #fff;
-      border-bottom: 1px solid #ddd;
-    }
-    .header-wrap {
-      max-width: 1100px;
-      margin: auto;
-      padding: 16px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .brand img {
-      height: 60px;
-      width: auto;
-    }
-    .brand-text strong {
-      display: block;
-      color: #d32f2f;
-      font-size: 26px;
-      line-height: 1.1;
-    }
-    .brand-text small {
-      color: #666;
-      font-size: 13px;
-    }
-
-    nav {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: #111;
-      font-weight: bold;
-      font-size: 15px;
-    }
-    nav a:hover {
-      color: #d32f2f;
-    }
-
-    .page {
-      max-width: 950px;
-      margin: auto;
-      padding: 50px 20px 70px;
-    }
-
-    .title-box {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .title-box h1 {
-      margin: 0 0 10px;
-      font-size: 40px;
-      color: #111;
-    }
-
-    .title-box p {
-      color: #666;
-      line-height: 1.7;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .form-card {
-      background: #fff;
-      border-radius: 14px;
-      padding: 30px;
-      box-shadow: 0 6px 20px rgba(0,0,0,.08);
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    .field {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 14px;
-    }
-
-    .field.full {
-      grid-column: 1 / -1;
-    }
-
-    label {
-      font-weight: bold;
-      margin-bottom: 8px;
-      font-size: 14px;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px 14px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 15px;
-      background: #fafafa;
-    }
-
-    .check-group,
-    .radio-group {
-      background: #fafafa;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 14px;
-    }
-
-    .check-group label,
-    .radio-group label {
-      display: block;
-      font-weight: normal;
-      margin-bottom: 10px;
-    }
-
-    .check-group input,
-    .radio-group input {
-      width: auto;
-      margin-right: 8px;
-    }
-
-    .submit-btn {
-      width: 100%;
-      background: #d32f2f;
-      color: #fff;
-      border: none;
-      padding: 15px;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 8px;
-    }
-
-    .help-box {
-      background: #fff;
-      margin-top: 24px;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 14px rgba(0,0,0,.06);
-    }
-
-    footer {
-      background: #000;
-      color: #fff;
-      padding: 35px 20px 20px;
-    }
-    .footer-wrap {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 20px;
-    }
-    .footer-logo {
-      max-width: 160px;
-      margin-bottom: 10px;
-    }
-    footer h4 {
-      margin-top: 0;
-    }
-    footer p, footer a {
-      color: #ccc;
-      line-height: 1.8;
-      margin: 0 0 6px;
-    }
-    .copyright {
-      max-width: 1100px;
-      margin: 20px auto 0;
-      padding-top: 15px;
-      border-top: 1px solid #222;
-      text-align: center;
-      color: #aaa;
-      font-size: 14px;
-    }
-
-    @media (max-width: 800px) {
-      .grid, .footer-wrap {
-        grid-template-columns: 1fr;
-      }
-      .title-box h1 {
-        font-size: 30px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -243,8 +13,8 @@
     <div class="topbar-wrap">
       <div>
         📍 7850 SE 110th St Rd, Belleview, FL |
-        📞 <a href="tel:3522450640" style="color:#fff;">(352) 245-0640</a> |
-        📧 <a href="mailto:sales@mmautoparts.net" style="color:#fff;">sales@mmautoparts.net</a>
+        📞 <a href="tel:3522450640">(352) 245-0640</a> |
+        📧 <a href="mailto:sales@mmautoparts.net">sales@mmautoparts.net</a>
       </div>
       <div>
         <button class="lang-btn" onclick="showEnglish()">EN</button>
@@ -262,8 +32,10 @@
           <small>M&M Auto Recycling LLC</small>
         </div>
       </div>
+
       <nav>
         <a href="index.html">Home</a>
+        <a href="http://search6452.used-auto-parts.biz/inventory/retail.htm" target="_blank" rel="noopener noreferrer">Search Inventory</a>
         <a href="part-request.html">Request a Part</a>
         <a href="last-arrivals.html">Last Arrivals</a>
         <a href="sell-your-car.html">Sell Your Car</a>
@@ -272,9 +44,10 @@
     </div>
   </header>
 
+  <!-- ENGLISH -->
   <div id="english">
     <div class="page">
-      <div class="title-box">
+      <div class="section-title">
         <h1>Sell Your Car</h1>
         <p>Fill out the form below if you want to sell your vehicle to us.</p>
       </div>
@@ -282,7 +55,7 @@
       <div class="form-card">
         <form action="https://formspree.io/f/xdayoyab" method="POST">
           <input type="hidden" name="_subject" value="Sell Your Car Form - Southside Auto Recycling">
-          <input type="hidden" name="_next" value="https://juam56.github.io/thank-you.html">
+          <input type="hidden" name="_next" value="https://southsideautorecycling.com/thank-you.html">
 
           <div class="grid">
             <div class="field">
@@ -344,9 +117,10 @@
     </div>
   </div>
 
+  <!-- SPANISH -->
   <div id="spanish" class="hidden">
     <div class="page">
-      <div class="title-box">
+      <div class="section-title">
         <h1>Vende Tu Carro</h1>
         <p>Llena el formulario si deseas vendernos tu vehículo.</p>
       </div>
@@ -354,7 +128,7 @@
       <div class="form-card">
         <form action="https://formspree.io/f/xdayoyab" method="POST">
           <input type="hidden" name="_subject" value="Formulario Sell Your Car - Southside Auto Recycling">
-          <input type="hidden" name="_next" value="https://juam56.github.io/thank-you.html">
+          <input type="hidden" name="_next" value="https://southsideautorecycling.com/thank-you.html">
 
           <div class="grid">
             <div class="field">
@@ -423,6 +197,7 @@
         <p><strong>Southside Auto Recycling</strong></p>
         <p>M&M Auto Recycling LLC</p>
       </div>
+
       <div>
         <h4>Contact</h4>
         <p>7850 SE 110th St Rd</p>
@@ -430,6 +205,7 @@
         <p><a href="tel:3522450640">(352) 245-0640</a></p>
         <p><a href="mailto:sales@mmautoparts.net">sales@mmautoparts.net</a></p>
       </div>
+
       <div>
         <h4>Service Areas</h4>
         <p>Orlando</p>
@@ -439,6 +215,7 @@
         <p>Clermont</p>
       </div>
     </div>
+
     <div class="copyright">
       © 2025 Southside Auto Recycling | M&M Auto Recycling LLC
     </div>
