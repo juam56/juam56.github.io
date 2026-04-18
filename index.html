@@ -5,158 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Southside Auto Recycling</title>
   <meta name="description" content="Southside Auto Recycling - Quality used auto parts in Belleview, FL.">
-  <style>
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: Arial, sans-serif; background: #f4f5f7; color: #111; }
-    a { text-decoration: none; }
-    .hidden { display: none; }
-
-    .topbar { background: #111; color: #fff; padding: 10px 20px; font-size: 14px; }
-    .topbar-wrap, .header-wrap, .section-wrap, .footer-wrap, .hero-wrap, .page-wrap {
-      max-width: 1200px; margin: auto;
-    }
-    .topbar-wrap {
-      display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
-    }
-
-    .lang-btn {
-      background: #d32f2f; color: #fff; border: none; padding: 7px 12px; border-radius: 5px; cursor: pointer; font-weight: bold;
-    }
-
-    header {
-      background: #fff; border-bottom: 1px solid #ddd; position: sticky; top: 0; z-index: 999;
-    }
-    .header-wrap {
-      min-height: 96px;
-      padding: 16px 20px;
-      display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap;
-    }
-
-    .brand {
-      display: flex; align-items: center; gap: 15px;
-    }
-    .brand img {
-      height: 68px; width: auto; display: block;
-    }
-    .brand-text strong {
-      display: block; font-size: 28px; color: #d32f2f; line-height: 1.1;
-    }
-    .brand-text small {
-      display: block; color: #666; font-size: 13px; margin-top: 2px;
-    }
-
-    nav {
-      display: flex; gap: 18px; flex-wrap: wrap; align-items: center;
-    }
-    nav a {
-      color: #111; font-weight: bold; font-size: 15px; white-space: nowrap;
-    }
-    nav a:hover { color: #d32f2f; }
-
-    .hero {
-      background:
-        linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.72)),
-        url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      color: #fff;
-      padding: 90px 20px;
-    }
-    .hero h1 {
-      font-size: 48px; margin: 0 0 15px; line-height: 1.1; max-width: 800px;
-    }
-    .hero p {
-      font-size: 18px; line-height: 1.7; color: #ececec; max-width: 760px; margin-bottom: 25px;
-    }
-    .hero-buttons {
-      display: flex; gap: 14px; flex-wrap: wrap;
-    }
-    .btn {
-      display: inline-block; padding: 14px 22px; border-radius: 8px; font-weight: bold; font-size: 15px;
-    }
-    .btn-primary { background: #d32f2f; color: #fff; }
-    .btn-secondary { background: #fff; color: #d32f2f; border: 2px solid #d32f2f; }
-
-    .info-strip {
-      background: #d32f2f; color: #fff; padding: 18px 20px;
-    }
-    .info-grid {
-      max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; text-align: center;
-    }
-    .info-item strong { display: block; font-size: 20px; margin-bottom: 5px; }
-
-    .section {
-      padding: 60px 20px;
-    }
-    .section-title {
-      text-align: center; margin-bottom: 35px;
-    }
-    .section-title h2 {
-      margin: 0 0 10px; font-size: 34px; color: #111;
-    }
-    .section-title p {
-      margin: 0; color: #666; font-size: 16px; line-height: 1.7;
-    }
-
-    .cards-3 {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-    }
-    .card, .box {
-      background: #fff; border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,.08);
-    }
-    .card { padding: 26px; }
-    .box { padding: 28px; }
-    .card h3 {
-      margin-top: 0; color: #d32f2f; font-size: 22px;
-    }
-    .box h3 {
-      margin-top: 0; color: #111; font-size: 24px;
-    }
-    .card p, .box p, .box li {
-      color: #555; line-height: 1.7;
-    }
-
-    .two-col {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
-    }
-    .box ul {
-      padding-left: 20px; margin: 0;
-    }
-    .box a { color: #d32f2f; font-weight: bold; }
-
-    .map-box iframe {
-      width: 100%; height: 320px; border: 0; border-radius: 10px;
-    }
-
-    .cta-band {
-      background: #111; color: #fff; text-align: center; padding: 60px 20px;
-    }
-    .cta-band h2 { margin-top: 0; font-size: 36px; }
-    .cta-band p {
-      max-width: 760px; margin: 0 auto 20px; color: #ddd; line-height: 1.7;
-    }
-
-    footer {
-      background: #000; color: #fff; padding: 40px 20px 25px;
-    }
-    .footer-wrap {
-      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px;
-    }
-    .footer-logo { max-width: 180px; margin-bottom: 14px; }
-    footer h4 { margin-top: 0; }
-    footer p, footer a {
-      color: #ccc; margin: 0 0 8px; line-height: 1.8;
-    }
-    .copyright {
-      max-width: 1200px; margin: 20px auto 0; border-top: 1px solid #222; padding-top: 18px; color: #aaa; text-align: center; font-size: 14px;
-    }
-
-    @media (max-width: 900px) {
-      .info-grid, .cards-3, .two-col, .footer-wrap {
-        grid-template-columns: 1fr;
-      }
-      .hero h1 { font-size: 34px; }
-      .header-wrap { align-items: flex-start; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -164,8 +13,8 @@
     <div class="topbar-wrap">
       <div>
         📍 7850 SE 110th St Rd, Belleview, FL |
-        📞 <a href="tel:3522450640" style="color:#fff;">(352) 245-0640</a> |
-        📧 <a href="mailto:sales@mmautoparts.net" style="color:#fff;">sales@mmautoparts.net</a>
+        📞 <a href="tel:3522450640">(352) 245-0640</a> |
+        📧 <a href="mailto:sales@mmautoparts.net">sales@mmautoparts.net</a>
       </div>
       <div>
         <button class="lang-btn" onclick="showEnglish()">EN</button>
@@ -183,6 +32,7 @@
           <small>M&M Auto Recycling LLC</small>
         </div>
       </div>
+
       <nav>
         <a href="index.html">Home</a>
         <a href="http://search6452.used-auto-parts.biz/inventory/retail.htm" target="_blank" rel="noopener noreferrer">Search Inventory</a>
@@ -194,6 +44,7 @@
     </div>
   </header>
 
+  <!-- ENGLISH -->
   <div id="english">
     <section class="hero">
       <div class="hero-wrap">
@@ -292,7 +143,7 @@
     </section>
 
     <section class="cta-band">
-      <div class="page-wrap">
+      <div class="cta-inner">
         <h2>Need a Part Fast?</h2>
         <p>Call Southside Auto Recycling today and let us help you find the right used auto part for your vehicle.</p>
         <a href="tel:3522450640" class="btn btn-primary">Call (352) 245-0640</a>
@@ -300,6 +151,7 @@
     </section>
   </div>
 
+  <!-- SPANISH -->
   <div id="spanish" class="hidden">
     <section class="hero">
       <div class="hero-wrap">
@@ -398,7 +250,7 @@
     </section>
 
     <section class="cta-band">
-      <div class="page-wrap">
+      <div class="cta-inner">
         <h2>¿Necesitas una Pieza Rápido?</h2>
         <p>Llama hoy a Southside Auto Recycling y te ayudamos a encontrar la pieza usada correcta para tu vehículo.</p>
         <a href="tel:3522450640" class="btn btn-primary">Llamar al (352) 245-0640</a>
@@ -413,6 +265,7 @@
         <p><strong>Southside Auto Recycling</strong></p>
         <p>M&M Auto Recycling LLC</p>
       </div>
+
       <div>
         <h4>Contact</h4>
         <p>7850 SE 110th St Rd</p>
@@ -420,6 +273,7 @@
         <p><a href="tel:3522450640">(352) 245-0640</a></p>
         <p><a href="mailto:sales@mmautoparts.net">sales@mmautoparts.net</a></p>
       </div>
+
       <div>
         <h4>Service Areas</h4>
         <p>Orlando</p>
@@ -429,6 +283,7 @@
         <p>Clermont</p>
       </div>
     </div>
+
     <div class="copyright">
       © 2025 Southside Auto Recycling | M&M Auto Recycling LLC
     </div>
