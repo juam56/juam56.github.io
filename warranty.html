@@ -237,9 +237,11 @@
       .footer-wrap {
         grid-template-columns: 1fr;
       }
+
       .hero h1 {
         font-size: 32px;
       }
+
       .content-box,
       .summary-box {
         padding: 22px;
@@ -276,17 +278,21 @@
       <nav>
         <a href="index.html">Home</a>
         <a href="part-request.html">Request a Part</a>
-        <a href="instagram.html">Instagram</a>
+        <a href="last-arrivals.html">Last Arrivals</a>
+        <a href="sell-your-car.html">Sell Your Car</a>
         <a href="warranty.html">Warranty</a>
       </nav>
     </div>
   </header>
 
+  <!-- ENGLISH -->
   <div id="english">
     <div class="page">
       <div class="hero">
         <h1>Warranty, Returns & Exchange Policy</h1>
-        <p>Please review these terms carefully before purchasing, installing, returning, or requesting an exchange for any part from Southside Auto Recycling.</p>
+        <p>
+          Please review these terms carefully before purchasing, installing, returning, or requesting an exchange for any part from Southside Auto Recycling.
+        </p>
       </div>
 
       <div class="summary-box">
@@ -361,11 +367,14 @@
     </div>
   </div>
 
+  <!-- SPANISH -->
   <div id="spanish" class="hidden">
     <div class="page">
       <div class="hero">
         <h1>Política de Garantía, Devoluciones y Cambios</h1>
-        <p>Por favor revisa cuidadosamente estos términos antes de comprar, instalar, devolver o solicitar un cambio de cualquier pieza de Southside Auto Recycling.</p>
+        <p>
+          Por favor revisa cuidadosamente estos términos antes de comprar, instalar, devolver o solicitar un cambio de cualquier pieza de Southside Auto Recycling.
+        </p>
       </div>
 
       <div class="summary-box">
@@ -447,6 +456,7 @@
         <p><strong>Southside Auto Recycling</strong></p>
         <p>M&M Auto Recycling LLC</p>
       </div>
+
       <div>
         <h4>Contact</h4>
         <p>7850 SE 110th St Rd</p>
@@ -454,6 +464,7 @@
         <p><a href="tel:3522450640">(352) 245-0640</a></p>
         <p><a href="mailto:sales@mmautoparts.net">sales@mmautoparts.net</a></p>
       </div>
+
       <div>
         <h4>Service Areas</h4>
         <p>Orlando</p>
@@ -463,6 +474,7 @@
         <p>Clermont</p>
       </div>
     </div>
+
     <div class="copyright">
       © 2025 Southside Auto Recycling | M&M Auto Recycling LLC
     </div>
@@ -474,11 +486,13 @@
       document.getElementById("spanish").classList.add("hidden");
       document.documentElement.lang = "en";
     }
+
     function showSpanish() {
       document.getElementById("spanish").classList.remove("hidden");
       document.getElementById("english").classList.add("hidden");
       document.documentElement.lang = "es";
     }
+
     document.addEventListener("DOMContentLoaded", function () {
       showEnglish();
     });
